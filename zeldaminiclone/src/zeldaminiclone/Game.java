@@ -17,7 +17,8 @@ import spritesheet.Spritesheet;
 public class Game extends Canvas implements Runnable, KeyListener{
 
 	//tamanho tela
-	public static int WIDTH = 480, HEIGHT =489;
+	public static int WIDTH = 640, HEIGHT =480;
+	public static int SCALE = 3;
 	public Player player;
 	
 	public World world; 
@@ -53,8 +54,8 @@ public class Game extends Canvas implements Runnable, KeyListener{
 		
 		
 		//fundo
-		g.setColor(Color.black);
-		g.fillRect(0, 0, WIDTH, HEIGHT);
+		g.setColor(new Color(0,135,13));
+		g.fillRect(0, 0, WIDTH*SCALE, HEIGHT*SCALE);
 		
 		//redanculo
 	//	g.setColor(Color.yellow); exemplo de player retangulo 
