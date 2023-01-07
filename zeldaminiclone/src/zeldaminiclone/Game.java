@@ -12,6 +12,7 @@ import javax.swing.JFrame;
 
 import mundo.World;
 import player.Player;
+import spritesheet.Spritesheet;
 
 public class Game extends Canvas implements Runnable, KeyListener{
 
@@ -26,6 +27,7 @@ public class Game extends Canvas implements Runnable, KeyListener{
 		this.addKeyListener(this);
 		//cria a dimenção da tela 
 		this.setPreferredSize(new Dimension(WIDTH, HEIGHT));
+		new Spritesheet(); 
 		player = new Player(32, 32);
 		//renderiza mundo e inimigos 
 		world = new World();
