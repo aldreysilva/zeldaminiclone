@@ -4,6 +4,8 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
+import mundo.World;
+
 public class Player extends Rectangle {
 
 	//direçoes
@@ -20,15 +22,15 @@ public class Player extends Rectangle {
 	public void tick() {
 		
 		//mover player lateral 
-		if(right) {
+		if(right && World.isfree(x+spd, y)) {
 			x+=spd;
-		}else if(left) {
+		}else if(left && World.isfree(x-spd,y)) {
 			x-=spd;
 		}
 		//mover player pra cima e baixo 
-		if(up) {
+		if(up && World.isfree(x, y-spd)) {
 			y-=spd;
-		}else if(down) {
+		}else if(down && World.isfree(x, y+spd)) {
 			y+=spd;
 		}
 	}

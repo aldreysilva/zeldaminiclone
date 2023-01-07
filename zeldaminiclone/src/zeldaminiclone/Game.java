@@ -10,6 +10,7 @@ import java.awt.image.BufferStrategy;
 
 import javax.swing.JFrame;
 
+import mundo.World;
 import player.Player;
 
 public class Game extends Canvas implements Runnable, KeyListener{
@@ -18,13 +19,17 @@ public class Game extends Canvas implements Runnable, KeyListener{
 	public static int WIDTH = 480, HEIGHT =489;
 	public Player player;
 	
+	public World world; 
 	
 	public Game() {
 		//adicionado  efeito de teclado. 
 		this.addKeyListener(this);
 		//cria a dimenção da tela 
 		this.setPreferredSize(new Dimension(WIDTH, HEIGHT));
-		player = new Player(10, 50);
+		player = new Player(32, 32);
+		//renderiza mundo e inimigos 
+		world = new World();
+		
 	}
 	
 	
@@ -54,6 +59,7 @@ public class Game extends Canvas implements Runnable, KeyListener{
 	//	g.fillRect(10, 10, 50, 50);
 		//renderizando player
 		player.render(g);
+		world.render(g);
 		
 		bs.show();
 		//fim render automatico 
