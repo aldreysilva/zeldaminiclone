@@ -4,6 +4,8 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
+import spritesheet.Spritesheet;
+
 public class Blocks extends Rectangle{
 
 	public Blocks(int x, int y) {
@@ -17,6 +19,7 @@ public class Blocks extends Rectangle{
 		g.fillRect(x, y, width, height);
 		g.setColor(Color.black);
 		g.drawRect(x, y, width, height);
+	//	g.drawImage(Spritesheet.tileWall, x, y, 32, 32,  null);
 	}
 	
 }
