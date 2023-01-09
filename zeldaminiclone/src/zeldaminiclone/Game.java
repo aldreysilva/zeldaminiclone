@@ -22,7 +22,7 @@ public class Game extends Canvas implements Runnable, KeyListener{
 	//tamanho tela
 	public static int WIDTH = 640, HEIGHT =480;
 	public static int SCALE = 3;
-	public Player player;
+	public static Player player;
 	public List<Inimigo> inimigos = new ArrayList<Inimigo>();
 	
 	public World world; 
