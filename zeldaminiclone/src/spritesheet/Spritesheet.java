@@ -10,6 +10,8 @@ public class Spritesheet {
 	
 	public static BufferedImage spritesheet;
 	public static BufferedImage[] player_front ;
+	
+	public static BufferedImage[] inimigo_front;
 //	public static BufferedImage tileWall;
 	
 	public Spritesheet() {
@@ -27,6 +29,9 @@ public class Spritesheet {
 		//adiciona animaçao
 		player_front[0] = Spritesheet.getSprite(0, 11, 16, 16);
 		player_front[1] = Spritesheet.getSprite(16, 11, 16, 16);
+		inimigo_front = new BufferedImage[2];
+		inimigo_front[0] = Spritesheet.getSprite(32, 11, 16, 16);
+		inimigo_front[1] = Spritesheet.getSprite(48, 11, 16, 16);
 		
 	}
 	
